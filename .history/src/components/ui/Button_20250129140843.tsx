@@ -9,7 +9,7 @@ interface ButtonProps{
     onClick?: () => void;
  }
 
-const defaultStyles = "rounded-md flex"
+ const defaultStyles = "rounded-md"
 
 const variantStyles = {
     "primary": "bg-purple-600 text-white",
@@ -24,7 +24,7 @@ const variantStyles = {
  }
 export const Button = (props: ButtonProps)=>{
 
-    return <button className={`${variantStyles[props.variant]} ${defaultStyles} ${sizeStyles[props.size]}`}>{props.startIcon ? <div className="pr-2">{props.startIcon}</div> : null} {props.text} {props.endIcon}</button>
+    return <button className={`${variantStyles[props.variant]} ${defaultStyles} ${sizeStyles[props.size]}`}>{}{props.text}</button>
  }
 
  <Button variant="primary" size="md" onClick={() => {}} text={"asd"} />
