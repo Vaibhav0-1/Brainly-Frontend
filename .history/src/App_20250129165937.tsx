@@ -21,7 +21,7 @@ function App() {
         variant="secondary"
         text='Add Content'>
 
-      </Button>
+         </Button>
 
 
       <Button size="lg" variant="secondary" text='Add Content'></Button>

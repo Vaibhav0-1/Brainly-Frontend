@@ -15,13 +15,7 @@ function App() {
       </Button>
 
 
-      <Button 
-        startIcon={<PlusIcon size={'md'}/>}
-        size="md"
-        variant="secondary"
-        text='Add Content'>
-
-      </Button>
+      <Button startIcon={<PlusIcon size={'md'}/>} size="md" variant="secondary" text='Add Content'></Button>
 
 
       <Button size="lg" variant="secondary" text='Add Content'></Button>
