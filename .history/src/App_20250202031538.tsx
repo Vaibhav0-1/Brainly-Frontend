@@ -9,9 +9,8 @@ import { Sidebar } from './components/ui/Sidebar'
 function App()  {
     const [modalOpen, setModalOpen] = useState(false);
   return (
-    <div className="p-4 ml-72 h-screen bg-gray-100 border-sm border-gray-200">
-      <Sidebar/>
-    <div>
+    <div className="p-4">
+    <div></div>
     <CreateContentModal open={modalOpen} onClose={() => setModalOpen(false)} />   
 
       <div className="flex justify-end gap-4">
@@ -26,7 +25,6 @@ function App()  {
       <Card type="twitter" link="https://x.com/sde_ray/status/1885698288273539270" title='First tweet'></Card>
 
       <Card type="youtube" link="https://youtu.be/vvdB4OG2biw?si=QdrrfdGvrwPuW2Rv" title='First video'></Card>
-      </div>
       </div>
     </div>
   )
