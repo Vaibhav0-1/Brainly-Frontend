@@ -22,9 +22,9 @@ const variantStyles = {
     "md": "py-2 px-4 text-md rounded-md",
     "lg": "py-4 px-8 text-lg rounded-xl",
  }
-export function Button(props: ButtonProps){
+export function Button(props: ButtonProps)=>{
 
-   return <button onClick={props.onClick} className={`${variantStyles[props.variant]} ${defaultStyles} ${sizeStyles[props.size]}`}>{props.startIcon ?
+   return <button className={`${variantStyles[props.variant]} ${defaultStyles} ${sizeStyles[props.size]}`}>{props.startIcon ?
    <div className="pr-2">{props.startIcon}</div> : null} {props.text} {props.endIcon}</button>
 }
 

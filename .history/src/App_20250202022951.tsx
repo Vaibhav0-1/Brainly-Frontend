@@ -9,12 +9,13 @@ function App()  {
     const [modalOpen, setModalOpen] = useState(true);
   return (
     <div className="p-4">
-    <CreateContentModal open={modalOpen} onClose={() => setModalOpen(false)} />   
+      {modalOpen && <CreateContentModal open={modalOpen} onClose={() => setModalOpen(false)} 
+      />}
 
       <div className="flex justify-end gap-4">
       <Button onClick={() => {
         setModalOpen(true)
-      }}variant='primary' text='Add Content' size='sm' startIcon={<PlusIcon size={'md'}/>}></Button>
+      }}variant='primary' text='Add Content' size='sm' startIcon={<PlusIcon size={'md'}/>} ></Button>
 
       <Button variant='secondary' text='Share Brain' size='sm' startIcon={<ShareIcon size='md'/>}></Button>
     </div>

@@ -9,7 +9,7 @@ function App()  {
     const [modalOpen, setModalOpen] = useState(true);
   return (
     <div className="p-4">
-    <CreateContentModal open={modalOpen} onClose={() => setModalOpen(false)} />   
+<CreateContentModal open={modalOpen} onClose={() => setModalOpen(false)} >   
 
       <div className="flex justify-end gap-4">
       <Button onClick={() => {

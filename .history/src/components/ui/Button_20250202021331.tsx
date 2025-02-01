@@ -24,8 +24,8 @@ const variantStyles = {
  }
 export function Button(props: ButtonProps){
 
-   return <button onClick={props.onClick} className={`${variantStyles[props.variant]} ${defaultStyles} ${sizeStyles[props.size]}`}>{props.startIcon ?
+   return <button onClick={onClick} className={`${variantStyles[props.variant]} ${defaultStyles} ${sizeStyles[props.size]}`}>{props.startIcon ?
    <div className="pr-2">{props.startIcon}</div> : null} {props.text} {props.endIcon}</button>
 }
 
- <Button variant="primary" size="md" onClick={() => {}} text={"asd"} />
+ <Button variant="primary" size="md" onClick={() => {on}} text={"asd"} />
