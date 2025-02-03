@@ -8,7 +8,7 @@ export function Sidebar(){
             <div className="flex">
             <SidebarItems text={"Twitter"} icon={<TwitterIcon/>}/>
             </div>
-            <div className="flex">
+            <div className="flex item-center">
             <SidebarItems text={"Youtube"} icon={<YoutubeIcon/>}/>
             </div>
         </div>

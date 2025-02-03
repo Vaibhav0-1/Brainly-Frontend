@@ -5,6 +5,6 @@ export function SidebarItems({text, icon}: {
     icon: ReactElement;
 }){
     return <div>
-        {icon} {text}
+        {icon}
     </div>
-}``
+}
