@@ -3,14 +3,12 @@ import { InputBox } from "../components/ui/InputBox"
 import axios from "axios";
 import { useRef } from "react";
 import { BACKEND_URL } from "../config";
-import { useNavigate } from "react-router-dom";
-
 
 export function Signin(){
 
     const usernameRef = useRef<HTMLInputElement>();
     const passwordRef = useRef<HTMLInputElement>();
-    const navigate = useNavigate();
+    consgt navigate
  
     async function signin() { 
         const username = usernameRef.current?.value;
@@ -25,8 +23,7 @@ export function Signin(){
     );
         const jwt = response.data.token;
         localStorage.setItem("token", jwt);
-        navigate("/dashboard")
-        
+        alert("You have been signed in")
     }
 
     return <div className="h-screen w-screen bg-gray-200 flex justify-center items-center">

@@ -1,21 +1,18 @@
+import { useRef } from "react"
 import { Button } from "../components/ui/Button"
 import { InputBox } from "../components/ui/InputBox"
-import axios from "axios";
-import { useRef } from "react";
+import  axios  from "axios"
 import { BACKEND_URL } from "../config";
-import { useNavigate } from "react-router-dom";
 
-
-export function Signin(){
-
+export function Signup(){
     const usernameRef = useRef<HTMLInputElement>();
     const passwordRef = useRef<HTMLInputElement>();
-    const navigate = useNavigate();
+    const na
  
-    async function signin() { 
+    async function Signup() { 
         const username = usernameRef.current?.value;
         const password = passwordRef.current?.value;
-        const response =  await axios.post(BACKEND_URL + "/api/v1/signin", 
+        await axios.post(BACKEND_URL + "/api/v1/signup", 
             {  username, password },
         {
             headers: {
@@ -23,10 +20,7 @@ export function Signin(){
             }
         }
     );
-        const jwt = response.data.token;
-        localStorage.setItem("token", jwt);
-        navigate("/dashboard")
-        
+        alert("You have signed up")
     }
 
     return <div className="h-screen w-screen bg-gray-200 flex justify-center items-center">
@@ -35,7 +29,7 @@ export function Signin(){
             <InputBox reference={passwordRef} placeholder="Password"/>
 
             <div className="flex justify-center pt-4 ">
-                <Button onClick={signin} loading={false} variant="primary" size={"sm"} text={"Signin"} fullWidth={true}/>
+                <Button onClick={Signup} loading={false} variant="primary" size={"sm"} text={"Signup"} fullWidth={true}/>
             </div>
 
 

@@ -26,7 +26,7 @@ export function Signin(){
         const jwt = response.data.token;
         localStorage.setItem("token", jwt);
         navigate("/dashboard")
-        
+        alert("You have been signed in")
     }
 
     return <div className="h-screen w-screen bg-gray-200 flex justify-center items-center">

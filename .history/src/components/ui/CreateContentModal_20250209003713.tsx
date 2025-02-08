@@ -35,7 +35,7 @@ export function CreateContentModal({open, onClose}: { open: boolean; onClose: ()
                 </div>
                 <div>
                     <InputBox placeholder= {"Title"} />
-                    <InputBox placeholder= {"Link"} />
+                    <InputBox placeholder= {"Link"} onChange={() => {}}/>
                 </div>
                 <div className="flex justify-center">
                 <Button variant="primary" size="md" text="Submit"/>

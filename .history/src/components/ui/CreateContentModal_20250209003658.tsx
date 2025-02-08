@@ -18,7 +18,7 @@ export function CreateContentModal({open, onClose}: { open: boolean; onClose: ()
         document.addEventListener("mousedown", handleOutsideClick); 
       }
       return () => {
-
+        
         document.removeEventListener("mousedown", handleOutsideClick);
       };
     }, [open, onClose]); 
@@ -34,8 +34,8 @@ export function CreateContentModal({open, onClose}: { open: boolean; onClose: ()
                     </div>
                 </div>
                 <div>
-                    <InputBox placeholder= {"Title"} />
-                    <InputBox placeholder= {"Link"} />
+                    <InputBox placeholder= {"Title"} onChange={() => {}}/>
+                    <InputBox placeholder= {"Link"} onChange={() => {}}/>
                 </div>
                 <div className="flex justify-center">
                 <Button variant="primary" size="md" text="Submit"/>
