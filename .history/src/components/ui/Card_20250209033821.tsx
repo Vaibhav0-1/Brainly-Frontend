@@ -14,9 +14,7 @@ export function Card({title, link, type}: CardProps){
                     <div className="pr-2 text-gray-500">
                         <ShareIcon size="sm"/> 
                     </div>
-                    <h3 className="text-lg font-medium text-gray-900 flex-1">
-                        {title}
-                    </h3>
+                    {title}
                 </div>
                 <div className="flex items-center">
                     <div className="pr-2 text-gray-500" >

@@ -30,7 +30,7 @@ export function CreateContentModal({open, onClose}: { open: boolean; onClose: ()
         "Authorization": localStorage.getItem("token")
       }
     })
-    onClose();
+    onClose
 
   }
 

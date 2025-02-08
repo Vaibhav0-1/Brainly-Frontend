@@ -1,13 +1,3 @@
-import { useState, useEffect } from 'react';
-import axios from 'axios';
-import { Sidebar } from '../components/ui/Sidebar';
-import { Button } from '../components/ui/Button';
-import { Card } from '../components/ui/Card';
-import { CreateContentModal } from '../components/ui/CreateContentModal';
-import { PlusIcon } from '../Icons/PlusIcon';
-import { ShareIcon } from '../Icons/ShareIcon';
-import { useContent } from '../hooks/useContent';
-import { BACKEND_URL } from '../config';
 
 export function Dashboard()  {
   const [modalOpen, setModalOpen] = useState(false);

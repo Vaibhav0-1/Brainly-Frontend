@@ -8,7 +8,6 @@ import { PlusIcon } from '../Icons/PlusIcon';
 import { ShareIcon } from '../Icons/ShareIcon';
 import { useContent } from '../hooks/useContent';
 import { BACKEND_URL } from '../config';
-
 export function Dashboard()  {
   const [modalOpen, setModalOpen] = useState(false);
   const [copied, setCopied] = useState(false);
