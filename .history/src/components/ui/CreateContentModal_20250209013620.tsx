@@ -25,10 +25,6 @@ export function CreateContentModal({open, onClose}: { open: boolean; onClose: ()
       title,
       link,
       type
-    }, {
-      headers: {
-        "Authorization": localStorage.getItem("token")
-      }
     })
 
 

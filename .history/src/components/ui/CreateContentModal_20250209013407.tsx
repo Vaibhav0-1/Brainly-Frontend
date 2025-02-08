@@ -2,8 +2,6 @@ import { InputBox } from "../ui/InputBox";
 import { CrossIcon } from "../../Icons/CrossIcon";
 import { Button } from "./Button";
 import { useEffect, useRef, useState } from "react";
-import { BACKEND_URL } from "../../config";
-import axios from "axios";
 
 enum ContentType {
   Youtube = "youtube",
@@ -18,18 +16,10 @@ export function CreateContentModal({open, onClose}: { open: boolean; onClose: ()
   const linkRef = useRef<HTMLInputElement>();
   const [type, setType] = useState(ContentType.Twitter);
 
-  async function  addContent(){
+  function addContent(){
     const title = titleRef.current?.value;
     const link = linkRef.current?.value;
-    await axios.post(`${BACKEND_URL}/api/v1/content`, {
-      title,
-      link,
-      type
-    }, {
-      headers: {
-        "Authorization": localStorage.getItem("token")
-      }
-    })
+    await axios.
 
 
   }

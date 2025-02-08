@@ -22,13 +22,7 @@ export function CreateContentModal({open, onClose}: { open: boolean; onClose: ()
     const title = titleRef.current?.value;
     const link = linkRef.current?.value;
     await axios.post(`${BACKEND_URL}/api/v1/content`, {
-      title,
-      link,
-      type
-    }, {
-      headers: {
-        "Authorization": localStorage.getItem("token")
-      }
+
     })
 
 

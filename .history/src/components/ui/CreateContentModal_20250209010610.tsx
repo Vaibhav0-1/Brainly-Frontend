@@ -2,8 +2,6 @@ import { InputBox } from "../ui/InputBox";
 import { CrossIcon } from "../../Icons/CrossIcon";
 import { Button } from "./Button";
 import { useEffect, useRef, useState } from "react";
-import { BACKEND_URL } from "../../config";
-import axios from "axios";
 
 enum ContentType {
   Youtube = "youtube",
@@ -18,18 +16,9 @@ export function CreateContentModal({open, onClose}: { open: boolean; onClose: ()
   const linkRef = useRef<HTMLInputElement>();
   const [type, setType] = useState(ContentType.Twitter);
 
-  async function  addContent(){
+  function addContent(){
     const title = titleRef.current?.value;
     const link = linkRef.current?.value;
-    await axios.post(`${BACKEND_URL}/api/v1/content`, {
-      title,
-      link,
-      type
-    }, {
-      headers: {
-        "Authorization": localStorage.getItem("token")
-      }
-    })
 
 
   }
@@ -53,14 +42,9 @@ export function CreateContentModal({open, onClose}: { open: boolean; onClose: ()
   
     if (!open) return null;
 
-    return <div> 
-    {open && <div> 
-      <div className="w-screen h-screen bg-slate-500 fixed top-0 left-0 opacity-50 flex justify-center">
-      </div>
-
-      <div className="w-screen h-screen fixed top-0 left-0 flex justify-center">
-      <div className="flex flex-col justify-center position-absolute" ref={modalRef}>
-            <span className="bg-white opacity-100 p-4 rounded fixed">
+    return <div className="w-screen h-screen bg-slate-500 fixed top-0 left-0 opacity-60 flex justify-center">
+        <div className="flex flex-col justify-center shadow-md rounded" ref={modalRef}>
+            <span className="bg-white opacity-100 p-4 rounded">
                 <div className="flex justify-end">
                     <div onClick={onClose} className="cursor-pointer">
                         <CrossIcon/>
@@ -71,8 +55,8 @@ export function CreateContentModal({open, onClose}: { open: boolean; onClose: ()
                     <InputBox reference={linkRef} placeholder= {"Link"} />
                 </div>
                 <div>
-                  <h1 className="justify-center flex">Type</h1>
-                  <div className="flex gap-1 p-4 justify-center">
+                  <h1 className="items-center"></h1>
+                  <div className="flex gap-1 ">
                   <Button text="Twitter" variant={type === ContentType.Twitter ? "primary" : "secondary"} onClick={() => {
                     setType(ContentType.Twitter)
                   }} size={"md"}/>
@@ -93,7 +77,6 @@ export function CreateContentModal({open, onClose}: { open: boolean; onClose: ()
                 
             </span>
         </div>
-      </div>
-    </div>}
-  </div>
+        
+    </div>
 }
