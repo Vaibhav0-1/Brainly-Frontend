@@ -8,21 +8,24 @@ interface CardProps{
 
 export function Card({title, link, type}: CardProps){
     return <div>
-        <div className="p-4 bg-white rounded-md shadow-md border-gray-200 max-w-72 border min-h">
+        <div className="p-4 bg-white rounded-md shadow-md border-gray-200 max-w-72 border min-h-48 min-w-72">
             <div className="flex justify-between">
                 <div className="flex items-center text-md">
                     <div className="pr-2 text-gray-500">
-                        <ShareIcon size="md"/> 
+                        <ShareIcon size="sm"/> 
                     </div>
-                    {title}
+                    <h3 className="text-lg font-medium text-gray-900 flex-1">
+                        {title}
+                    </h3>
                 </div>
                 <div className="flex items-center">
                     <div className="pr-2 text-gray-500" >
-                        <a href={link} target="_blank"></a>                     
-                        <ShareIcon size="md"/>
+                        <a href={link} 
+                        target="_blank"></a>                     
+                        <ShareIcon size="sm"/>
                     </div>
                     <div className="text-gray-500">
-                        <ShareIcon size="md"/>
+                        <ShareIcon size="sm"/>
                     </div>
                 </div>
             </div>
@@ -32,6 +35,12 @@ export function Card({title, link, type}: CardProps){
                 {type === "twitter" && <blockquote className="twitter-tweet">
                 <a href={link.replace("x.com", "twitter.com")}></a> 
                 </blockquote>}
+
+                {type === "twitter" && <blockquote className="twitter-tweet">
+                <a href={link.replace("x.com", "twitter.com")}></a> 
+                </blockquote>}
+
+
             </div>
         </div>
     </div>

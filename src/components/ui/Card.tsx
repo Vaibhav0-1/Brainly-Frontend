@@ -35,6 +35,12 @@ export function Card({title, link, type}: CardProps){
                 {type === "twitter" && <blockquote className="twitter-tweet">
                 <a href={link.replace("x.com", "twitter.com")}></a> 
                 </blockquote>}
+
+                {type === "twitter" && <blockquote className="twitter-tweet">
+                <a href={link.replace("x.com", "twitter.com")}></a> 
+                </blockquote>}
+
+
             </div>
         </div>
     </div>
