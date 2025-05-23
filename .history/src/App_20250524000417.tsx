@@ -9,7 +9,7 @@ import Landing from "./Landing"; // Import the new Landing page
 import { Signin } from "./pages/Signin";
 import { Signup } from "./pages/Signup";
 import { Dashboard } from "./pages/dashboard";
-
+<Route path="/" element={<Landing />} />
 
 export function App() {
   return (
